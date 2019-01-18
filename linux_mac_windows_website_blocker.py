@@ -11,7 +11,7 @@ if platform.system() == 'Linux' or platform.system() == 'Darwin':
     cmd_clear = 'clear'
 elif platform.system() == 'Windows':
     print("[*] System detected -> {}".format(platform.system()))
-    hosts_path = 'C\\Windows\\System32\\drivers\\etc\\hosts'
+    hosts_path = 'C:\\Windows\\System32\\drivers\\etc\\hosts'
     cmd_clear = 'cls'
 
 def clear():
@@ -30,7 +30,7 @@ def ReserveChoice(choice):
     elif choice == ADD_NEW:
         EXISTED = False
         cnt = 0
-        target = raw_input("Enter website url to block: ")
+        target = input("Enter website url to block: ")
         print("Adding new entry to hosts: {} -> {}".format(target, REDIRECT))
         with open(hosts_path, 'r+') as f:
             for line in f:
@@ -49,7 +49,7 @@ def ReserveChoice(choice):
         print("DONE! {} entry added!".format(cnt))
     elif choice == REMOVE_BLOCK:
         cnt = 0
-        target = raw_input("Enter the blocked-website to unblock: ")
+        target = input("Enter the blocked-website to unblock: ")
         with open(hosts_path, 'r+') as f:
             file_content = f.readlines()
             f.seek(0)
@@ -70,7 +70,7 @@ def menu():
     print("[{}] Remove block website.".format(REMOVE_BLOCK))
     print("[{}] Exit".format(EXIT))
     try:
-        choice = raw_input("Enter your choice: ")
+        choice = input("Enter your choice: ")
     except:
         return True
     if len(choice) > 0:
