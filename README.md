@@ -1,5 +1,6 @@
 # linux_mac_windows_website_blocker
 This script was written to help someone block website which their don't want to access in.
+I wrote this script to block myself waste my time in Facebook when i have to focus to code :((((((((
 
 # block method: redirect requests by modify hosts file.
 
